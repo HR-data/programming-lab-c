@@ -1,33 +1,32 @@
 #include<stdio.h>
-#include<ctype.h>
+
 int main()
-{
-    int i;
-    char sarr[11];
-    printf("Enter the 10 characters:\n");
-
-    for (i=0;i<10;i++)
     {
-        sarr[i]=getchar();
+       int q1,q2,r1,r2;
+       float n,res;
+       printf("Enter the decimal number \n");
+       scanf("%f",&n);
+       int n1 = n*100;
+       q1 = n1 / 100;
+       r1 = n1 % 100;
+       q1 = (q1+11)*100;
+       q2 = r1 / 10;
+       r2 = r1 % 10;
+       q2 = q2 -1;
+       r2 = r2 -1;
+       if(q2 < 0)
+         {
+             q2 = 0;
+            
+         }
+        else if (r2 < 0)
+          {
+              r2 = 0;
+          } 
+        res = (q1 +10*q2+r2)/100.0;
+        printf("The decimal number after increasing and decreasing is %.2f \n",res);
+
+
+
+        return 0;
     }
-    if(islower(sarr[0])==islower(sarr[1])&&islower(sarr[0])==islower(sarr[2])&&islower(sarr[0])==islower(sarr[3])
-       &&islower(sarr[0])==islower(sarr[4])&&islower(sarr[0])==islower(sarr[5])
-       &&islower(sarr[0])==islower(sarr[6])&&islower(sarr[0])==islower(sarr[7])
-       &&islower(sarr[0])==islower(sarr[8])&&islower(sarr[0])==islower(sarr[9])&&islower(sarr[0])!=0)
-    {
-         printf("The leeters are lowercase \n");
-
-    }
-    else if(isupper(sarr[0])==isupper(sarr[1])&&isupper(sarr[0])==isupper(sarr[2])&&isupper(sarr[0])==isupper(sarr[3])
-       &&isupper(sarr[0])==isupper(sarr[4])&&isupper(sarr[0])==isupper(sarr[5])
-       &&isupper(sarr[0])==isupper(sarr[6])&&isupper(sarr[0])==isupper(sarr[7])
-       &&isupper(sarr[0])==isupper(sarr[8])&&isupper(sarr[0])==isupper(sarr[9])&&isupper(sarr[0])!=0)
-    {
-         printf("Theletters are  in uppercase \n");
-
-    }
-    else printf("The chacters are both upper and loer case \n");
-
-
-    return 0;
-}

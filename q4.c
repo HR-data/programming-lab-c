@@ -1,25 +1,23 @@
 #include<stdio.h>
-
 int main()
+ {
+    int num,count_=0;
+    printf("Enter the number:\n");
+    scanf("%d",&num);
+    printf("The smallest and second smallest factors of %d are :",num);
+    for(int i=2;i<=num;i++)
     {
+        if(num % i== 0)
+        {
+            ++count_;
+            printf("%d, \n ",i);
 
-        int n;
-        printf("Enter the number for fibbonacci : ");
-        scanf("%d",&n);
-        int arr[n];
-        arr[0] =0;
-        arr[1]=1;
-        printf("\n");
-        printf("The fibonacci series upto %d terms is : %d %d ",n,arr[0],arr[1]);
-        for(int i =2; i < n;i++)
-            {
-                
-                arr[i]=arr[0]+arr[1];
-                printf("%d ",arr[i]);
-                arr[0]=arr[1];
-                arr[1]=arr[i];
-            }
-
-
-        return 0;
+        }
+        if(count_==2)
+        {
+            break;
+        }
     }
+
+  return 0;
+ }

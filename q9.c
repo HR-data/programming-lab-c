@@ -1,34 +1,32 @@
-#include <stdio.h>
-#include <string.h>
+#include<stdio.h>
+#include<math.h>
+
 int main()
-{
-    int num;
-    int j;
-    printf("Enter the value 'n' that is number of names you want to enter\n");
-    scanf("%d", &num);
-    char str[50], last[50];
-    printf("Follow one way of giving input , either uppercase or lowercase but not both\n");
-    for (int i = 0; i < num; i++)
     {
-        if (i == 0)
-        {
-            printf("Enter the name number %d\n", i + 1);
-            scanf("%s", &str);
-            strcpy(last, str);
-            j = i + 1;
-        }
+        int x1,x2,x3,y1,y2,y3;
+        printf("Enter all the three co ordinates (x1,y1),(x2,y2),(x3,y3): \n");
+        scanf("%d%d%d%d%d%d",&x1,&y1,&x2,&y2,&x3,&y3);
+        int check_= x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2);
+        if (check_ == 0)
+         {
+             printf("The points are collinear.\n");
+         }
         else
         {
-            printf("Enter the name number %d\n", i + 1);
-            scanf("%s", &str);
-            if (strcmp(last, str) < 0)
-            {
-                strcpy(last, str);
-                j = i + 1;
-            }
-        }
-    }
-    printf("Name number %d is last in dictionary order and the name is '%s' \n", j, last);
+            printf("The points are not collinear.\n");
+            printf("The area of traingle is %d \n",check_);
+        } 
+        int p = pow(x1-x2,2)+pow(y1-y2,2);
+        int b = pow(x2-x3,2)+pow(y2-y3,2);
+        int h = pow(x1-x3,2)+pow(y1-y3,2);
 
-    return 0;
-}
+        if ((p>0 && b>0 && h > 0)&&(p == b+h || b == p+h || h == p+b))
+          {
+              printf("The traingle is right angled traingle.\n");
+          }
+        else
+          {
+              printf("the traingle is not right angled triangle. \n");
+          }  
+        return 0;
+    }
