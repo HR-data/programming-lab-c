@@ -1,33 +1,32 @@
-#include <stdio.h>
-#include <string.h>
-int main()
-    { 
-        int i,j,n,p1,p2;
-        char arr1[100],arr2[100];
-        printf("Enter the two names\n");
-        scanf("%s %s",arr1,arr2);
-        p1=strlen(arr1);
-        p2=strlen(arr2);
-        if(p1>p2)
-          n=p1;
-        else
-          n=p2;
-        for(i=0;i<n;i++)
-            {
+#include<stdio.h>
+#include<stdlib.h>
+/*  
 
-            if(arr1[i]<arr2[i])
-              {
-              printf("The lexicographic order is %s then %s \n",arr1,arr2);
-              break;
-              }
-            else if(arr1[i]>arr2[i])
-              {
-                printf("The lexicographic order is %s then %s \n",arr2,arr1);
-                break;
-              }
-            else
-            continue;
+	Harsh raj
+	21MA60R05
+*/
 
-             }
-       return 0;
-    }
+
+int main ()
+
+	{
+	  int num1,num2;
+	  printf("Enter the two numbers \n");
+	  scanf("%d %d", &num1,&num2);
+	  
+	  if (num1 > num2)
+	  	{
+	  	  printf("Number first is greater than second and the number is %d \n",num1);
+	  	}
+	  else if (num1 < num2)
+	  	{
+	  	  printf("Number second is greater than first and the number is %d \n",num2);
+	  	}
+	   else 
+	  	{
+	  	  printf("Number first is equal to second and the number are num1 = %d and num 2 = %d \n",num1,num2);
+	  	} 	  	  
+	  
+	
+	return 0;
+	}

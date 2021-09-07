@@ -1,25 +1,26 @@
 #include<stdio.h>
+#include<stdlib.h>
+/*  
 
-int main()
-    {
+	Harsh raj
+	21MA60R05
+*/
 
-        int n;
-        printf("Enter the number for fibbonacci : ");
-        scanf("%d",&n);
-        int arr[n];
-        arr[0] =0;
-        arr[1]=1;
-        printf("\n");
-        printf("The fibonacci series upto %d terms is : %d %d ",n,arr[0],arr[1]);
-        for(int i =2; i < n;i++)
-            {
-                
-                arr[i]=arr[0]+arr[1];
-                printf("%d ",arr[i]);
-                arr[0]=arr[1];
-                arr[1]=arr[i];
-            }
+int main ()
 
-
-        return 0;
-    }
+	{
+	  int m,n,l,k,t,c,i;
+	  printf("Enter the two number\n");
+	  scanf("%d %d",&n,&m);
+	  i = n%10;
+	  l = n/10;
+	  k = m%10;
+	  t = m/10;
+	  c = l*10+k;
+	  int d = t*10+i;
+	  printf("product of new numbers is  %d \n",c*d);
+	  
+	
+	
+	return 0;
+	}

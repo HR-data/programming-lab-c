@@ -1,59 +1,25 @@
 #include<stdio.h>
-#include<string.h>
 #include<stdlib.h>
-#include<ctype.h>
+/*  
 
-int main()
-    {
-        char arr[1000];
-        printf("Enter the paragraph : \n");
-        fgets(arr, sizeof(arr), stdin);
+	Harsh raj
+	21MA60R05
+*/
 
+int main ()
 
-        int l = strlen(arr), vcount=0,ccount =0,bcount=0,pcount=0;
-        for(int i = 0; i < l ; i++)
-            {
-                arr[i]=tolower(arr[i]);
-                if(arr[i] == 'a' || arr[i] == 'e' || arr[i] == 'i' || arr[i] == 'o' || arr[i] == 'u')
-                    {
-                        vcount++;
-                    }
-                    
-                else if ((arr[i] >= 'a' && arr[i] <= 'z') || (arr[i] >= 'A' && arr[i] <= 'Z'))
-                    {
-                          ccount++;
-                    }
-                   
-                else if(arr[i] == '!' || arr[i] == ',' || arr[i] == ';' || arr[i] == '.' || arr[i] == '?' || arr[i] == '-'  || arr[i] == ':')
-                    {
-                         pcount++;  
-                    }
-                   
-                else if(arr[i] == ' ') 
-                    {
-                         bcount++;
-                    }
-               
-                       
-            }
-
-        printf("The number of vowels in paragraph is %d \n",vcount);
-        printf("The number of consonant in paragraph is %d \n",ccount);
-        printf("The number of blank space in paragraph is %d \n",bcount);
-
-        printf("The number of punctuation character in paragraph is %d \n",pcount);
-
-
-
-
-
-
-
-
-
-
-
-
-
-        return 0;
-    }
+	{
+	  int n,l,k,t,c,i;
+	  printf("Enter the number \n");
+	  scanf("%d",&n);
+	  i = n/10;
+	  l = n%10;
+	  k = n/100;
+	  t = k*10+l;
+	  c = i*t;
+	  printf("product after manupliating %d \n",c);
+	  
+	
+	
+	return 0;
+	}

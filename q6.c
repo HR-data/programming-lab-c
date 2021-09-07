@@ -1,32 +1,30 @@
 #include<stdio.h>
-int main()
-{
-    int num;              
-    printf("Enter the number of elements ");
-    scanf("%d",&num);    
-    int arr[num],m,count; 
-	int Maxfrequency = 0;    
-    printf("Enter the elements of array by giving one space or enter. ");
-    for( int k=0;k<num;k++)   
-    {
-        scanf("%d",&arr[k]);
-    } 
-    m=arr[0];
-    for(int i = 0; i< num; i++)   
-    {
-        count = 1;
-        for(int j = i+1; j < num; j++)  
-        {
-            if(arr[j] == arr[i])
-            {
-                count++;     
-                if(count > Maxfrequency)
-                {
-                    m = arr[j];
-                }
-            }
-        }
-    } 
-    printf("The number of Maximum repeating element is : %d \n",m);   
-    return 0;
-}
+#include<stdlib.h>
+/*  
+
+	Harsh raj
+	21MA60R05
+*/
+
+
+int main ()
+
+	{
+	  for (int i = 0 ; i < 1001; i++)
+	  	{   
+	  	   int n = i/10;
+	  	   int k = n%10;
+	  	   if ( k>4 && k<9)
+	  		{
+	  			
+	  		printf("%d \n",i);
+	  			
+	  		}
+	  		
+	  	}
+	  
+	   printf("The above numbers second last digit is between 5 and 8. \n");
+	
+	
+	return 0;
+	}

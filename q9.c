@@ -1,34 +1,32 @@
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-    int num;
-    int j;
-    printf("Enter the value 'n' that is number of names you want to enter\n");
-    scanf("%d", &num);
-    char str[50], last[50];
-    printf("Follow one way of giving input , either uppercase or lowercase but not both\n");
-    for (int i = 0; i < num; i++)
-    {
-        if (i == 0)
-        {
-            printf("Enter the name number %d\n", i + 1);
-            scanf("%s", &str);
-            strcpy(last, str);
-            j = i + 1;
-        }
-        else
-        {
-            printf("Enter the name number %d\n", i + 1);
-            scanf("%s", &str);
-            if (strcmp(last, str) < 0)
-            {
-                strcpy(last, str);
-                j = i + 1;
-            }
-        }
-    }
-    printf("Name number %d is last in dictionary order and the name is '%s' \n", j, last);
+#include<stdio.h>
+#include<stdlib.h>
+/*  
 
-    return 0;
-}
+	Harsh raj
+	21MA60R05
+*/
+
+
+int main ()
+
+	{
+	  int num1;
+	  printf("Enter the numbers \n");
+	  scanf("%d", &num1);
+	  
+	  if (num1 > 0)
+	  	{
+	  	  printf("Number is positive and the number  is %d \n",num1);
+	  	}
+	  else if (num1 < 0)
+	  	{
+	  	  printf("Number is negative and the number  is %d \n",num1);
+	  	}
+	   else 
+	  	{
+	  	  printf("Number is zero and the number is %d \n",num1);
+	  	} 	  	  
+	  
+	
+	return 0;
+	}

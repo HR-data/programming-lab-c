@@ -1,34 +1,29 @@
-#include <stdio.h>
-int main()
-{
-	int i=1,j=2,k,f,n;
-	
-	printf("Enter an integer n to find out first n prime numbers: ");
-	scanf("%d",&n);
-	int arr[n];
-	
-printf("The first %d prime numbers are : \n",n);
-while(i<=n)
-    {
-        f=1;
-        for(k=2;k<=j-1;k++)
-        {
-            if(j%k==0)  
-            {
-             f=0;
-             break;     
-            }  
-        }
-            if(f==1)
-            {
-              arr[i]=j ;
-             i++;
-            }
-        j++;
-    }
-    for(i=1;i<=n;i++)
-       printf("%d ",arr[i]);
+#include<stdio.h>
+#include<stdlib.h>
+/*  
 
-    printf("\n")  ; 
-return 0;
-}
+	Harsh raj
+	21MA60R05
+*/
+
+
+int main ()
+
+	{
+	  for (int i = 0 ; i < 101; i++)
+	  	{   
+	  	   int n = i%10;
+	  	   if ( n%3 == 0)
+	  		{
+	  			
+	  		printf("%d \n",i);
+	  			
+	  		}
+	  		
+	  	}
+	  
+	   printf("The above numbers last digit is divisble by 3. \n");
+	
+	
+	return 0;
+	}
