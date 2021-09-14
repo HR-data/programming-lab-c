@@ -1,33 +1,22 @@
 #include<stdio.h>
-#include<ctype.h>
+#include<math.h>
+
+int fd(int);
 int main()
-{
-    int i;
-    char sarr[11];
-    printf("Enter the 10 characters:\n");
-
-    for (i=0;i<10;i++)
     {
-        sarr[i]=getchar();
+        int n;
+        printf("Enter the number :");
+        scanf("%d",&n);
+        
+        printf("The first digit of %d is %d",n,fd(n));
+        printf("\n");
+        return 0;
     }
-    if(islower(sarr[0])==islower(sarr[1])&&islower(sarr[0])==islower(sarr[2])&&islower(sarr[0])==islower(sarr[3])
-       &&islower(sarr[0])==islower(sarr[4])&&islower(sarr[0])==islower(sarr[5])
-       &&islower(sarr[0])==islower(sarr[6])&&islower(sarr[0])==islower(sarr[7])
-       &&islower(sarr[0])==islower(sarr[8])&&islower(sarr[0])==islower(sarr[9])&&islower(sarr[0])!=0)
+int fd(int n)
     {
-         printf("The leeters are lowercase \n");
-
-    }
-    else if(isupper(sarr[0])==isupper(sarr[1])&&isupper(sarr[0])==isupper(sarr[2])&&isupper(sarr[0])==isupper(sarr[3])
-       &&isupper(sarr[0])==isupper(sarr[4])&&isupper(sarr[0])==isupper(sarr[5])
-       &&isupper(sarr[0])==isupper(sarr[6])&&isupper(sarr[0])==isupper(sarr[7])
-       &&isupper(sarr[0])==isupper(sarr[8])&&isupper(sarr[0])==isupper(sarr[9])&&isupper(sarr[0])!=0)
-    {
-         printf("Theletters are  in uppercase \n");
-
-    }
-    else printf("The chacters are both upper and loer case \n");
-
-
-    return 0;
-}
+        while(n>=10)
+            {
+                n = n/10;
+            }
+        return n;
+    }    

@@ -1,33 +1,19 @@
-#include <stdio.h>
-#include <string.h>
+#include<stdio.h>
+#include<math.h>
+
+double x_power_n(double);
 int main()
-    { 
-        int i,j,n,p1,p2;
-        char arr1[100],arr2[100];
-        printf("Enter the two names\n");
-        scanf("%s %s",arr1,arr2);
-        p1=strlen(arr1);
-        p2=strlen(arr2);
-        if(p1>p2)
-          n=p1;
-        else
-          n=p2;
-        for(i=0;i<n;i++)
-            {
+    {
 
-            if(arr1[i]<arr2[i])
-              {
-              printf("The lexicographic order is %s then %s \n",arr1,arr2);
-              break;
-              }
-            else if(arr1[i]>arr2[i])
-              {
-                printf("The lexicographic order is %s then %s \n",arr2,arr1);
-                break;
-              }
-            else
-            continue;
+        double p,b;
+        printf("Enter the perpendicular and base of right angled traingle traingle.");
+        scanf("%lf %lf",&p,&b);
+        printf("The hypotenuse is %.2lf",sqrt(x_power_n(p)+x_power_n(b)));
+        printf("\n");
 
-             }
-       return 0;
+        return 0;
+    }
+double x_power_n(double p )
+    {
+        return p*p;
     }

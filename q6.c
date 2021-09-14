@@ -1,32 +1,37 @@
 #include<stdio.h>
+#include<math.h>
+
+double root(double,double,double);
 int main()
-{
-    int num;              
-    printf("Enter the number of elements ");
-    scanf("%d",&num);    
-    int arr[num],m,count; 
-	int Maxfrequency = 0;    
-    printf("Enter the elements of array by giving one space or enter. ");
-    for( int k=0;k<num;k++)   
     {
-        scanf("%d",&arr[k]);
-    } 
-    m=arr[0];
-    for(int i = 0; i< num; i++)   
+        double a,b,c;
+        printf("Enter the number a , b , c :");
+        scanf("%lf %lf %lf",&a,&b,&c);
+        printf("You have entered the a = %.2lf , b = %.2lf, c = %.2lf \n",a,b,c);
+        root(a,b,c);
+        printf("\n");
+        return 0;
+    }
+double root(double a, double b,double c)
     {
-        count = 1;
-        for(int j = i+1; j < num; j++)  
+       double d = pow(b,2)-4*a*c ;
+       if(d > 0)
         {
-            if(arr[j] == arr[i])
-            {
-                count++;     
-                if(count > Maxfrequency)
-                {
-                    m = arr[j];
-                }
-            }
+            double r1= (-b+sqrt(d))/(2*a);
+            double r2= (-b-sqrt(d))/(2*a);
+            printf("The roots are distinct and real & the roots are %.2lf & %.2lf",r1,r2);
         }
-    } 
-    printf("The number of Maximum repeating element is : %d \n",m);   
-    return 0;
-}
+       else if(d == 0)
+        {
+            double r1= (-b)/(2*a);
+       
+            printf("The roots are equal and real & the root is %.2lf ",r1);
+        }
+       else
+        {
+            double realPart = -b / (2 * a);
+            double imagPart = sqrt(-d) / (2 * a);
+            printf("The roots are complex & the real and imaginary part are %.2lf ,%.2lf",realPart , imagPart);
+        }
+        return 0;
+    }    

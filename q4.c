@@ -1,25 +1,23 @@
 #include<stdio.h>
+#include<math.h>
 
+int fact(int);
 int main()
     {
-
         int n;
-        printf("Enter the number for fibbonacci : ");
+        printf("Enter the positive number :");
         scanf("%d",&n);
-        int arr[n];
-        arr[0] =0;
-        arr[1]=1;
+        
+        printf("The factorial of %d is %d",n,fact(n));
         printf("\n");
-        printf("The fibonacci series upto %d terms is : %d %d ",n,arr[0],arr[1]);
-        for(int i =2; i < n;i++)
-            {
-                
-                arr[i]=arr[0]+arr[1];
-                printf("%d ",arr[i]);
-                arr[0]=arr[1];
-                arr[1]=arr[i];
-            }
-
-
         return 0;
     }
+int fact(int n)
+    {  
+        int f=1;
+        for(int i =1 ; i <=n;i++)
+            {
+               f=f*i; 
+            }
+        return f;    
+    }    
