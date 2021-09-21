@@ -1,34 +1,26 @@
-#include <stdio.h>
-int main()
-{
-	int i=1,j=2,k,f,n;
-	
-	printf("Enter an integer n to find out first n prime numbers: ");
-	scanf("%d",&n);
-	int arr[n];
-	
-printf("The first %d prime numbers are : \n",n);
-while(i<=n)
-    {
-        f=1;
-        for(k=2;k<=j-1;k++)
-        {
-            if(j%k==0)  
-            {
-             f=0;
-             break;     
-            }  
-        }
-            if(f==1)
-            {
-              arr[i]=j ;
-             i++;
-            }
-        j++;
-    }
-    for(i=1;i<=n;i++)
-       printf("%d ",arr[i]);
+#include<stdio.h>
 
-    printf("\n")  ; 
-return 0;
-}
+
+int main()
+    {
+        int n;
+        printf("Enter the number :");
+        scanf("%d",&n);
+        float f[25];
+        int j;
+        for(int i =0 ; i < n;i++)
+            {
+                f[1]= 1+1/((float)n*2);
+                 j =1;
+                while(j <n)
+                    {
+                        f[j+1] = 1+ (float)((j+1)*2)/f[j];
+                        j++;
+                    }
+            }
+        printf("f[%d]=%.3f",n,f[j]); 
+        printf("\n");   
+
+        return 0;
+    }
+

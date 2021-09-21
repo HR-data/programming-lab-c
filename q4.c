@@ -1,25 +1,30 @@
 #include<stdio.h>
+void fun2(int);
 
 int main()
     {
-
-        int n;
-        printf("Enter the number for fibbonacci : ");
-        scanf("%d",&n);
-        int arr[n];
-        arr[0] =0;
-        arr[1]=1;
-        printf("\n");
-        printf("The fibonacci series upto %d terms is : %d %d ",n,arr[0],arr[1]);
-        for(int i =2; i < n;i++)
-            {
-                
-                arr[i]=arr[0]+arr[1];
-                printf("%d ",arr[i]);
-                arr[0]=arr[1];
-                arr[1]=arr[i];
-            }
-
+        int num;
+        printf("Enter the number :");
+        scanf("%d",&num);
+        fun2(num);
 
         return 0;
     }
+
+void fun2(int n)
+    {
+        float f[25];
+        int j;
+        for(int i =0 ; i < n;i++)
+            {
+                f[1]= 1+1/((float)n);
+                 j =1;
+                while(j <n)
+                    {
+                        f[j+1] = 1+ (float)(j+1)/f[j];
+                        j++;
+                    }
+            }
+        printf("f[%d]=%.3f",n,f[j]); 
+        printf("\n");   
+    }    

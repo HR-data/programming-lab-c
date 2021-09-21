@@ -1,32 +1,30 @@
 #include<stdio.h>
+void fun3(int);
+
 int main()
-{
-    int num;              
-    printf("Enter the number of elements ");
-    scanf("%d",&num);    
-    int arr[num],m,count; 
-	int Maxfrequency = 0;    
-    printf("Enter the elements of array by giving one space or enter. ");
-    for( int k=0;k<num;k++)   
     {
-        scanf("%d",&arr[k]);
-    } 
-    m=arr[0];
-    for(int i = 0; i< num; i++)   
+        int num;
+        printf("Enter the number :");
+        scanf("%d",&num);
+        fun3(num);
+
+        return 0;
+    }
+
+void fun3(int n)
     {
-        count = 1;
-        for(int j = i+1; j < num; j++)  
-        {
-            if(arr[j] == arr[i])
+        float f[25];
+        int j;
+        for(int i =0 ; i < n;i++)
             {
-                count++;     
-                if(count > Maxfrequency)
-                {
-                    m = arr[j];
-                }
+                f[1]= 1+1/((float)n*2);
+                 j =1;
+                while(j <n)
+                    {
+                        f[j+1] = 1+ (float)((j+1)*2)/f[j];
+                        j++;
+                    }
             }
-        }
-    } 
-    printf("The number of Maximum repeating element is : %d \n",m);   
-    return 0;
-}
+        printf("f[%d]=%.3f",n,f[j]); 
+        printf("\n");   
+    }    
